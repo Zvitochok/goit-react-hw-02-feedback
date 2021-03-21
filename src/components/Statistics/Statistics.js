@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Notification from "../Notification/Notification";
 
 const Statistics = ({ good, neutral, bad, total, positivePercantage }) => {
@@ -17,5 +18,13 @@ const Statistics = ({ good, neutral, bad, total, positivePercantage }) => {
     </>
   );
 };
+
+Statistics.propTypes = {
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercantage: PropTypes.number,
+}
 
 export default Statistics;
